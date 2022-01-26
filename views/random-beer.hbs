@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>IronBeer</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+  </head>
+  <body>
+      <nav>
+      </nav>
+    <main>
+        <div class="container">
+        <h1>Beers</h1>
+        <div class="row">
+            {{#each beer}}
+                {{> beerpartial}}
+            Food: {{#each this.food_pairing}}
+                    <p>{{this}}</p>
+                {{/each}}
+                Tips:<p>{{this.brewers_tips}}</p>
+            {{/each}}
+
+
+        </div>
+        </div>
+ 
+    </main>
+  </body>
+</html>
